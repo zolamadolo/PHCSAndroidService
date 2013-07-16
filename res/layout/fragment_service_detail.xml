@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+          xmlns:android="http://schemas.android.com/apk/res/android"
+    	  xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/mytopLinearLayout"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:orientation="vertical">
+<TextView 
+    android:id="@+id/service_detail"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="fill_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/textview_boader"
+    android:textIsSelectable="true"
+    android:gravity="center"
+    tools:context=".ServiceDetailFragment" />
+<LinearLayout
+    android:id="@+id/mybottomLinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+		   <Button 
+		        android:id="@+id/left_button"
+		    	android:layout_width="390dp"
+		    	android:layout_marginLeft="10dp"
+		        android:layout_height="50dp"
+		        android:layout_gravity="left"
+		    	android:text="@string/rightbutton"
+		    	style="?android:attr/buttonBarButtonStyle"/>
+		   <Button
+		       android:id="@+id/right_button"
+		       style="?android:attr/buttonBarButtonStyle"
+		       android:layout_width="390dp"
+		       android:layout_marginLeft="10dp"
+		       android:layout_height="50dp"
+		       android:layout_gravity="right"
+		       android:text="@string/leftbutton" />
+	</LinearLayout>
+
+	<Button
+	    android:id="@+id/boarder_button"
+	    android:layout_width="fill_parent"
+	    android:layout_height="5dp"
+	    android:layout_marginLeft="1dp"
+	    android:background="@drawable/textview_boader" />
+
+</LinearLayout>
+
+

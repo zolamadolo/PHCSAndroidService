@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PHCS Android Service</string>
+    <string name="title_service_detail">PHCS Service Detail</string>
+	<string name="rightbutton">Start Service</string>
+	<string name="leftbutton">Stop Service</string>
+</resources>

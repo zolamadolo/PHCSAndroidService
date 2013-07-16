@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+          xmlns:android="http://schemas.android.com/apk/res/android"
+    	  xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/mytopLinearLayout"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:orientation="vertical">
+ <TextView 
+    android:id="@+id/service_detail_toggle"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="fill_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/textview_boader"
+    android:textIsSelectable="true"
+    android:gravity="center"
+    tools:context=".ServiceDetailFragment" />
+<ToggleButton
+    android:id="@+id/toggle_button"
+    android:layout_width="fill_parent"
+    android:layout_height="68dp"/>
+</LinearLayout>
