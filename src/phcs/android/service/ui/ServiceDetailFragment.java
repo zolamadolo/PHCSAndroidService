@@ -1,5 +1,7 @@
 package phcs.android.service.ui;
 
+import phcs.android.service.background.BackgroundService;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +11,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
-
-import phcs.android.service.ui.R;
 
 /**
  * A fragment representing a single Service detail screen. This fragment is
@@ -30,6 +30,7 @@ public class ServiceDetailFragment extends Fragment {
 	 */
 	private ServiceContent.UIItem mItem;
 	private ServiceListActivity mActivity;
+
 	/**
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
@@ -110,6 +111,7 @@ public class ServiceDetailFragment extends Fragment {
 					@Override
 					public void onClick(View arg0) {
 						mActivity.SERVICE_RUNNING = false;
+						getActivity().stopService(new Intent(getActivity(),BackgroundService.class));
 						left.setEnabled(true);
 					}
 				});
@@ -117,6 +119,7 @@ public class ServiceDetailFragment extends Fragment {
 					@Override
 					public void onClick(View arg0) {
 						mActivity.SERVICE_RUNNING = true;
+						getActivity().startService(new Intent(getActivity(),BackgroundService.class));
 						left.setEnabled(false);
 					}
 				});
