@@ -33,6 +33,8 @@ import phcs.android.service.client.ServiceClient;
  *
  */
 public class ServiceThread implements Runnable {
+	private final String SERVER_IP = "port";
+	private final int PORT = 0000;
 	/**
 	 * 
 	 * @param notificationMgn
@@ -41,8 +43,8 @@ public class ServiceThread implements Runnable {
 	public void run() {
 		try
 		{
-			InetAddress serverAddr = InetAddress.getByName("10.1.10.1");
-			Socket socket  = new Socket(serverAddr,5000);
+			InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
+			Socket socket  = new Socket(serverAddr,PORT);
 			ServiceClient serviceClient = new ServiceClient(socket);
 			serviceClient.connect();
 		}catch(Exception ex){
